@@ -1,0 +1,1 @@
+export { default as CustomersData } from "./CustomersData"

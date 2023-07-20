@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply mx-auto
+}
+
+body {
+  @apply text-gray-400
+}
+
+.HeroSection {
+  background: url(assets/img/Fallow03.webp) no-repeat top;
+}
+
+@media only screen and (min-width:767px) and (max-width : 991px) {
+  .HeroSection .Hero {
+    @apply mx-auto w-[500px] pt-[50px]
+  }
+}
+
+.Drop {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.LinkOne:hover .Drop {
+  visibility: visible;
+  opacity: 1;
+}
+
+.ProductBg {
+  background: url(assets/img/Fallow09.webp) no-repeat top;
+  background-size: cover;
+}
+
+.MarkingSection {
+  background: url(../src/assets/img/Fallow17.webp) top no-repeat;
+  background-size: cover;
+}
+
+.MarkingBg {
+  background: url(../src/assets/img/Fallow19.png) no-repeat;
+  background-size: cover;
+  height: fit-content;
+}
+
+.OneSection {
+  background-image: url(../src/assets/img/download.webp);
+  /* background-size: cover; */
+  /* height: fit-content; */
+}
+
+.TwoSection {
+  background-image: url(../src/assets/img/bg-16.png);
+}
+
+.slick-prev:before,
+.slick-next:before,
+.slick-next,
+.slick-prev {
+  display: none;
+}
