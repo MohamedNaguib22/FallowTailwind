@@ -11,6 +11,7 @@ import "../../../../index.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
+import Btn from "../../../Data/Btn/Btn";
 const HeroSection = () => {
   useEffect(() => {
     AOS.init();
@@ -18,11 +19,11 @@ const HeroSection = () => {
   const [pop, setPop] = useState(false);
   const handelPop = (e) => {
     setPop(!pop);
-    e.target.preventdefault();
+    e.preventDefault();
   };
   return (
     <>
-      <div className="HeroSection lg:h-screen relative bg-cover lg:pt-[150px] pt-[150px] sm:pt-[80px] h-[110vh] overflow-hidden">
+      <div className="HeroSection h-auto relative bg-cover bg-no-repeat pt-[150px]  pb-[80px] overflow-hidden">
         <div className="container">
           <div className=" h-full lg:grid lg:grid-cols-2 items-center ">
             <div
@@ -50,10 +51,7 @@ const HeroSection = () => {
                   className="absolute left-[-30%] top-[-15px] animate-[moveRight_3s_ease-in-out_infinite]"
                 />
                 <button>
-                  <a
-                    href="/#"
-                    className="text-white bg-blue-600 py-[16px] px-[26px] rounded-lg "
-                  >
+                  <Btn>
                     <span className="text-[18px] font-medium ">H</span>
                     <span className="text-[18px] font-medium ">i</span>
                     <span className="text-[18px] font-medium ">r</span>
@@ -63,7 +61,7 @@ const HeroSection = () => {
                     <span>
                       <FaLongArrowAltRight size={20} className="inline" />
                     </span>
-                  </a>
+                  </Btn>
                 </button>
                 <button onClick={() => handelPop()}>
                   <div className="flex items-center gap-5">
@@ -139,7 +137,7 @@ const HeroSection = () => {
                     </span>
                   </a>
                 </button>
-                <button>
+                <button onClick={() => handelPop()}>
                   <a href="/#">
                     <div className="flex items-center gap-5">
                       <div className=" border-[1px] rounded-full border-blue-400 w-[50px] h-[50px] relative">

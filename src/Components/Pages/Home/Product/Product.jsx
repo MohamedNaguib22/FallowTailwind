@@ -4,12 +4,22 @@ import Fallow10 from "../../../../assets/img/Fallow10.png";
 import Vector from "../../../../assets/img/Vector-6-1.png";
 import Vector2 from "../../../../assets/img/Vector-2999.png";
 import { FaBehance, FaGithub, FaLinkedinIn, FaSkype } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect} from "react";
 const Product = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <section className="ProductBg bg-cover bg-no-repeat w-full min-h-screen bg-center lg:min-h-[20vh] mt-1">
+    <section className="ProductBg bg-cover bg-no-repeat w-full h0auto pb-[80px]  mt-1">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-4 pt-[100px] gap-[80px]">
-          <div className="col-span-2 relative">
+          <div
+            className="col-span-2 relative"
+            data-aos-duration="1500"
+            data-aos="fade-right"
+          >
             <img src={HeroProduct} />
             <img
               src={Fallow10}
@@ -42,11 +52,21 @@ const Product = () => {
               </div>
             </div>
           </div>
-          <div className="text-center lg:text-start col-span-2 lg:mt-[0] mt-[-70px]">
+          <div
+            className="text-center lg:text-start col-span-2 lg:mt-[0] mt-[-70px]"
+            data-aos-duration="1500"
+            data-aos="fade-left"
+          >
             <h1 className="text-black text-[26px] lg:text-[53px] font-bold mb-7 relative z-10">
               My Journey As A Product Designer
-              <img className="absolute right-[3%] top-[3%] lg:block hidden z-[-1]" src={Vector}/>
-              <img className="absolute right-[3%] top-[70%] lg:hidden block z-[-1] px-16" src={Vector2}/>
+              <img
+                className="absolute right-[3%] top-[3%] lg:block hidden z-[-1]"
+                src={Vector}
+              />
+              <img
+                className="absolute right-[3%] top-[70%] lg:hidden block z-[-1] px-16"
+                src={Vector2}
+              />
             </h1>
             <p className="text-[16px] font-medium w-full lg:w-[80%] mb-7">
               Hello there! My name is Robert Elisc. I am a web designer &
@@ -66,6 +86,7 @@ const Product = () => {
                 <div
                   className="bg-black h-1.5 rounded-full"
                   style={{ width: "70%" }}
+                  
                 />
               </div>
             </div>

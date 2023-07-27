@@ -56,7 +56,7 @@ const Customers = () => {
             {DataCustomers.map((item) => {
               return (
                 <div key={item.id}>
-                  <CustomersData img={item.img} alt={item.alt} />
+                  <CustomersData  {...item} />
                 </div>
               );
             })}

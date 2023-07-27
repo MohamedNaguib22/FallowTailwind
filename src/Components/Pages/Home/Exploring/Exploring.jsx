@@ -25,22 +25,7 @@ const Exploring = () => {
         </div>
         <div className="px-8 lg:px-0 grid grid-cols-1 lg:grid-cols-3 gap-[40px] mt-[60px] mb-[100px]">
           {DataCards.map((item) => {
-            return (
-              <ThreeCard
-                key={item.id}
-                img={item.img}
-                imgTwo={item.imgTwo}
-                Hone={item.Hone}
-                Pone={item.Pone}
-                alt={item.alt}
-                link={item.link}
-                icon={item.icon}
-                className={item.className}
-                classNameTwo={item.classNameTwo}
-                classNameThree={item.classNameThree}
-                classNameFour={item.classNameFour}
-              />
-            );
+            return <ThreeCard key={item.id} {...item} />;
           })}
         </div>
       </div>

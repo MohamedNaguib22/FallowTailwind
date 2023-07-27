@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer {
+  .btn {@apply  bg-blue-600 py-[16px] px-[26px] rounded-lg }
+}
 .container {
   @apply mx-auto
 }
@@ -11,13 +14,7 @@ body {
 }
 
 .HeroSection {
-  background: url(assets/img/Fallow03.webp) no-repeat top;
-}
-
-@media only screen and (min-width:767px) and (max-width : 991px) {
-  .HeroSection .Hero {
-    @apply mx-auto w-[500px] pt-[50px]
-  }
+  background-image: url(assets/img/Fallow03.webp);
 }
 
 .Drop {
@@ -30,9 +27,9 @@ body {
   opacity: 1;
 }
 
+
 .ProductBg {
-  background: url(assets/img/Fallow09.webp) no-repeat top;
-  background-size: cover;
+  background-image: url(assets/img/Fallow09.webp) ;
 }
 
 .MarkingSection {
@@ -48,14 +45,23 @@ body {
 
 .OneSection {
   background-image: url(../src/assets/img/download.webp);
-  /* background-size: cover; */
-  /* height: fit-content; */
 }
 
 .TwoSection {
   background-image: url(../src/assets/img/bg-16.png);
 }
-
+.Form {
+  background-image: url(../src/assets/img/Fallow35.webp);
+}
+.SharingSection{
+  background-image: url(../src/assets/img/Fallow36.png);
+}
+.Skills{
+  background-image: url(../src/assets/img/Fallow40.webp);
+}
+.Footer {
+  background-image: url(../src/assets/img/Fallow41.png);
+}
 .slick-prev:before,
 .slick-next:before,
 .slick-next,

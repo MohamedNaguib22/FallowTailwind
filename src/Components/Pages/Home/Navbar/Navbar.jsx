@@ -13,11 +13,14 @@ import {
 } from "react-icons/fa";
 import logoNav from "../../../../assets/img/Fallow01.svg";
 import { useState } from "react";
+import { DataNav, DataNavImg, DataNavThree, DataNavTwo } from "../../../Data/DataNav/DataNav";
+import NavData, { NavDataImgJsx } from "../../../Data/DataNav/NavData";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handelNav = () => {
     setNav(!nav);
   };
+
   return (
     <>
       <div className="Navbar w-full top-2 lg:px-0 px-5 fixed lg:top-[50px] z-[50]">
@@ -29,7 +32,7 @@ const Navbar = () => {
               </div>
               {/* Navbar */}
               <ul className="hidden lg:flex lg:items-center gap-[35px] ">
-                <li className="relative LinkOne" >
+                <li className="relative LinkOne">
                   <a href="/#" className="text-black font-medium text-[18px] ">
                     Home <FaChevronDown className="inline" size={12} />
                     <ul className="Drop absolute top-[56px] left-[-50px] w-[260px] bg-white p-[20px] rounded-lg border-b-blue-600 border-b-[5px] transition-all duration-[0.3s] ">
@@ -39,34 +42,22 @@ const Navbar = () => {
                           <FaAngleRight className="inline ml-[32px] " />
                           <ul className="absolute top-[20px] right-[-289px] w-[260px] bg-white p-[30px] rounded-lg border-b-blue-600 border-b-[5px] invisible opacity-0 group-hover:opacity-[1] group-hover:visible group-hover:top-[0px] transition-all duration-[0.3s] ">
                             <li className="mb-2  hover:bg-blue-100  transition-colors py-[10px] px-[8px] w-full duration-[0.3s] rounded-[5px]">
-                              <a href="/">
-                                Product Designer
-                              </a>
+                              <a href="/">Product Designer</a>
                             </li>
-                            <li  className="mb-2 hover:bg-blue-100  transition-colors py-[10px] px-[8px] w-full duration-[0.3s] rounded-[5px]">
-                              <a href="/">
-                                Ui/Ux Designer
-                              </a>
+                            <li className="mb-2 hover:bg-blue-100  transition-colors py-[10px] px-[8px] w-full duration-[0.3s] rounded-[5px]">
+                              <a href="/">Ui/Ux Designer</a>
                             </li>
-                            <li  className="mb-2 hover:bg-blue-100  transition-colors py-[10px] px-[8px] w-full duration-[0.3s] rounded-[5px]">
-                              <a href="/">
-                                Developer
-                              </a>
+                            <li className="mb-2 hover:bg-blue-100  transition-colors py-[10px] px-[8px] w-full duration-[0.3s] rounded-[5px]">
+                              <a href="/">Developer</a>
                             </li>
-                            <li  className="mb-2 hover:bg-blue-100  transition-colors py-[10px] px-[8px] w-full duration-[0.3s] rounded-[5px]">
-                              <a href="/">
-                                Teacher
-                              </a>
+                            <li className="mb-2 hover:bg-blue-100  transition-colors py-[10px] px-[8px] w-full duration-[0.3s] rounded-[5px]">
+                              <a href="/">Teacher</a>
                             </li>
-                            <li  className="mb-2 hover:bg-blue-100  transition-colors py-[10px] px-[8px] w-full duration-[0.3s] rounded-[5px]">
-                              <a href="/">
-                                Photographer
-                              </a>
+                            <li className="mb-2 hover:bg-blue-100  transition-colors py-[10px] px-[8px] w-full duration-[0.3s] rounded-[5px]">
+                              <a href="/">Photographer</a>
                             </li>
                             <li className="hover:bg-blue-100  transition-colors py-[10px] px-[8px] w-full duration-[0.3s] rounded-[5px]">
-                              <a href="/">
-                                Lawyer
-                              </a>
+                              <a href="/">Lawyer</a>
                             </li>
                           </ul>
                         </a>
@@ -77,19 +68,13 @@ const Navbar = () => {
                           <FaAngleRight className="inline ml-[40px]" />
                           <ul className="absolute top-[25px] right-[-285px] w-[260px]  bg-white p-[30px] rounded-lg border-b-blue-600 border-b-[5px] invisible opacity-0 group-hover:opacity-[1] group-hover:visible group-hover:top-[10px] transition-all duration-[0.3s]">
                             <li className="mb-2 hover:bg-blue-100  transition-colors py-[10px] px-[8px] w-full duration-[0.3s] rounded-[5px]">
-                              <a href="/">
-                                Product Designer
-                              </a>
+                              <a href="/">Product Designer</a>
                             </li>
-                            <li  className="mb-2 hover:bg-blue-100  transition-colors py-[10px] px-[8px] w-full duration-[0.3s] rounded-[5px]">
-                              <a href="/">
-                                Ui/Ux Designer
-                              </a>
+                            <li className="mb-2 hover:bg-blue-100  transition-colors py-[10px] px-[8px] w-full duration-[0.3s] rounded-[5px]">
+                              <a href="/">Ui/Ux Designer</a>
                             </li>
-                            <li  className="hover:bg-blue-100  transition-colors py-[10px] px-[8px] w-full duration-[0.3s] rounded-[5px]">
-                              <a href="/">
-                                Developer
-                              </a>
+                            <li className="hover:bg-blue-100  transition-colors py-[10px] px-[8px] w-full duration-[0.3s] rounded-[5px]">
+                              <a href="/">Developer</a>
                             </li>
                           </ul>
                         </a>
@@ -107,9 +92,31 @@ const Navbar = () => {
                     Services
                   </a>
                 </li>
-                <li>
+                <li className="LinkOne">
                   <a href="/#" className="text-black font-medium text-[18px] ">
                     Pages <FaChevronDown className="inline" size={12} />
+                    <ul className="absolute flex Drop justify-between items-center left-[50%]  top-[83px] translate-x-[-50%] border-b-blue-600 border-b-[5px] transition-all duration-[0.3s]  px-[40px] py-[20px] w-[800px] bg-white rounded-lg shadow-md">
+                      <div>
+                        {DataNav.map((item) => {
+                          return <NavData key={item.id} {...item} />;
+                        })}
+                      </div>
+                      <div>
+                        {DataNavTwo.map((item) => {
+                          return <NavData key={item.id} {...item} />;
+                        })}
+                      </div>
+                      <div>
+                        {DataNavThree.map((item) => {
+                          return <NavData key={item.id} {...item} />;
+                        })}
+                      </div>
+                      <div>
+                        {DataNavImg.map((item) => {
+                          return <NavDataImgJsx key={item.id} {...item} />;
+                        })}
+                      </div>
+                    </ul>
                   </a>
                 </li>
                 <li>
@@ -123,13 +130,15 @@ const Navbar = () => {
             <div className="flex items-center">
               <button
                 className="bg-blue-600 p-3 rounded-lg lg:hidden"
-                onClick={() => handelNav()}>
+                onClick={() => handelNav()}
+              >
                 <FaBars size={25} className="text-white" />
               </button>
               <button className="hidden sm:block ml-[70px] ">
                 <a
                   href="/#"
-                  className="text-white bg-blue-600 py-[16px] px-[26px] rounded-lg ">
+                  className="text-white bg-blue-600 py-[16px] px-[26px] rounded-lg "
+                >
                   <span className="text-[18px] font-medium ">L</span>
                   <span className="text-[18px] font-medium ">e</span>
                   <span className="text-[18px] font-medium ">t</span>
@@ -149,7 +158,8 @@ const Navbar = () => {
       <div
         className={` fixed z-[999] top-0 right-0 lg:right-[-100%] h-screen opacity-[1] lg:opacity-0  overflow-hidden bg-white transition-all delay-[0.5s] ${
           nav ? "w-[380px]" : "w-0"
-        } `}>
+        } `}
+      >
         <ul className="py-[70px] px-[38px] ">
           <li className="mb-[45px]" onClick={() => handelNav()}>
             <FaPlus className="rotate-45 text-blue-600" size={24} />
@@ -216,7 +226,8 @@ const Navbar = () => {
       <div
         className={` fixed z-[998] top-0 right-0 lg:right-[-100%]  h-screen opacity-[1] lg:opacity-0 transition-all overflow-hidden delay-[0.3s] bg-black/50 ${
           nav ? "w-full" : "w-0"
-        } `}></div>
+        } `}
+      ></div>
     </>
   );
 };

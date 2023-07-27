@@ -71,47 +71,20 @@ const Projects = () => {
               return (
                 <ProjectsData
                   key={item.id}
-                  img={item.img}
-                  head={item.head}
-                  Phead={item.Phead}
-                  Btn={item.Btn}
+                  {...item}
                 />
               );
             })
           : tab === "Tab3"
           ? App.map((item) => {
-              return (
-                <ProjectsData
-                  key={item.id}
-                  img={item.img}
-                  head={item.head}
-                  Phead={item.Phead}
-                  Btn={item.Btn}
-                />
-              );
+              return <ProjectsData key={item.id} {...item} />;
             })
           : tab === "Tab2"
           ? Website.map((item) => {
-              return (
-                <ProjectsData
-                  key={item.id}
-                  img={item.img}
-                  head={item.head}
-                  Phead={item.Phead}
-                  Btn={item.Btn}
-                />
-              );
+              return <ProjectsData key={item.id} {...item} />;
             })
           : DataProjects.map((item) => {
-              return (
-                <ProjectsData
-                  key={item.id}
-                  img={item.img}
-                  head={item.head}
-                  Phead={item.Phead}
-                  Btn={item.Btn}
-                />
-              );
+              return <ProjectsData key={item.id} {...item} />;
             })}
       </div>
     </div>

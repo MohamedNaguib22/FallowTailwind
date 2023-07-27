@@ -67,14 +67,7 @@ const Marking = () => {
             </div>
             <div className="mt-[50px] grid grid-cols-1 md:grid-cols-2 gap-[40px]">
               {DataNum.map((item) => {
-                return (
-                  <CardNum
-                    key={item.id}
-                    icon={item.icon}
-                    num={item.num}
-                    pNum={item.pNum}
-                  />
-                );
+                return <CardNum key={item.id} {...item} />;
               })}
             </div>
           </div>
